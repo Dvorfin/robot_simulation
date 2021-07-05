@@ -11,20 +11,20 @@ pygame.display.set_caption('Demo HMI for robot simulation')
 
 font = pygame.font.SysFont('Comic Sans MS', 30)
 
-# define colours
+# цвета
 bg = (144, 128, 168)
 red = (255, 0, 0)
 black = (0, 0, 0)
 white = (255, 255, 255)
 grey = (110, 110, 110)
 
-# define global variable
+
 clicked = False
 msg = "Waiting for command"
 
 
 class button():
-    # colours for button and text
+    # цвета кнопок и текста
     button_col = (201, 166, 253)
     hover_col = (177, 117, 229)
     click_col = (121, 80, 139)
@@ -44,7 +44,7 @@ class button():
 
         pos = pygame.mouse.get_pos()  # получение координат мыши
 
-        # create pygame Rect object for the button
+        # прямогульник кнопки
         button_rect = Rect(self.x, self.y, self.width, self.height)
 
 
@@ -61,7 +61,7 @@ class button():
             pygame.draw.rect(screen, self.button_col, button_rect)
 
 
-        # add text to button
+        # помещение текста в кнопку
         text_img = font.render(self.text, True, self.text_col)
         text_len = text_img.get_width()
         screen.blit(text_img, (self.x + int(self.width / 2) - int(text_len / 2), self.y + 25))
