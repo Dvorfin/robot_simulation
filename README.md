@@ -2,7 +2,7 @@
 
 Установка:
 
-1. Создать три проекта питона
+1. Создать три проекта в PyCharm
 2. Поместить отдельно в каждый проект файлы из папок HMI, OpenCV, robot
 3. В проекте с файлами robot установить через терминал библиотеки pygame и paho-mqtt следующими командами: pip install pyagme, pip install paho-mqtt
 4. В проекте с файлами HMI установить через терминал библиотеку pygame и paho-mqtt следующими командами: pip install pyagme, pip install paho-mqtt
