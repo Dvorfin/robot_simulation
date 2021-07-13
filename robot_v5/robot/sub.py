@@ -1,11 +1,11 @@
 import paho.mqtt.client as mqtt
 
-foo = 0
+command = 0
 
 def on_message(client, userdata, message):
     print("Received message: ", str(message.payload.decode("utf-8")))
     global foo
-    foo = message.payload.decode("utf-8")
+    command = message.payload.decode("utf-8")
 
 
 def start():
@@ -15,10 +15,10 @@ def start():
     client.loop_start()
     client.subscribe("Commands")
     client.on_message = on_message
-    #time.sleep(3)
+
 
 def get_msg():
-    return foo
+    return command
 
 
 
