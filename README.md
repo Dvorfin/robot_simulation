@@ -8,7 +8,7 @@
 2. Поместить отдельно в каждый проект файлы из папок HMI, OpenCV, robot
 3. В проекте с файлами robot установить через терминал библиотеки pygame и paho-mqtt следующими командами: pip install pyagme, pip install paho-mqtt
 4. В проекте с файлами HMI установить через терминал библиотеку pygame и paho-mqtt следующими командами: pip install pyagme, pip install paho-mqtt
-5. В проекте с файлами OpenCV установить через терминал библиотеки opencv-python, pywin32 и paho-mqtt следующими командами: pip install opencv-python, pip install pywin32, pip install paho-mqtt
+5. В проекте с файлами OpenCV установить через терминал библиотеки opencv-python, pywin32, paho-mqtt и pillow следующими командами: pip install opencv-python, pip install pywin32, pip install paho-mqtt, pip install pillow
 
 
 Запуск:
