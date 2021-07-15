@@ -40,7 +40,6 @@ while running:
     surf = pygame.Surface((850, 650))
     surf.blit(screen, (0, 0))
 
-    #print(str(sub.get_msg()))
 
     # включение/отключение робота, выбор режима работы: авто/ручной
     if str(sub.get_msg()) == "Start": robot.startRobot()
@@ -49,10 +48,10 @@ while running:
         robot.manual()
         manual()
     if str(sub.get_msg()) == "Stop": robot.stopRobot()
-    #print(Robot.getRobotPos(robot))
+    print(Robot.getRobotPos(robot))
 
     if robot.cargoTaken == True:    # если груз взят, то везем его
-        robot.goTo(deliver_pos[0], deliver_pos[1]+50, Serv.Get_Rob_X(), Serv.Get_Rob_Y())
+        robot.goTo(Serv.Get_CheckPoint_X(), Serv.Get_CheckPoint_Y(), Serv.Get_Rob_X(), Serv.Get_Rob_Y()) #стерли +50 к ыгрыку
         if robot.robot_rect.collidepoint(deliver_pos):
             robot.cargoTaken = False
             robot.cargoDelivered = True
@@ -65,7 +64,8 @@ while running:
             beer.beerTaken()  # при взятии пива удаляет его с экрана
 
     else:   # если груз доставлен, то уезжаем
-        robot.goTo(500,500, Serv.Get_Rob_X(), Serv.Get_Rob_Y())
+        if (width/2 - Serv.Get_Rob_X() > 5) and (height/2 - Serv.Get_Rob_Y() > 5):
+            robot.goTo(width/2, height/2, Serv.Get_Rob_X(), Serv.Get_Rob_Y())
 
 
 
