@@ -95,22 +95,6 @@ class Robot():
                     self.rotation(-1)
 
 
-
-            '''if vec2.as_polar()[1] < 0:  # расчет в полярной системе
-                if math.fabs(self.vector.as_polar()[1] - vec2.as_polar()[1]) > 2:
-                    self.rotation(-1)
-                if math.fabs(self.vector.as_polar()[1] - vec2.as_polar()[1]) < 2:
-                    self.rotation(1)
-
-            if vec2.as_polar()[1] > 0:
-                if math.fabs(self.vector.as_polar()[1] - vec2.as_polar()[1]) > 2:
-                    self.rotation(1)
-                if math.fabs(self.vector.as_polar()[1] - vec2.as_polar()[1]) < 2:
-                    self.rotation(-1)
-
-            if math.fabs(self.vector.as_polar()[1] - vec2.as_polar()[1]) <= 6:
-                self.movement(1)'''
-
     def startRobot(self):
         self.robotStarted = True
 
