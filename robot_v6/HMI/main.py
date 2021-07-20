@@ -63,19 +63,16 @@ class button():
         else:
             pygame.draw.rect(screen, self.button_col, button_rect)
 
-
         # add text to button
         text_img = font.render(self.text, True, self.text_col)
         text_len = text_img.get_width()
         screen.blit(text_img, (self.x + int(self.width / 2) - int(text_len / 2), self.y + 20))
         return action
 
-
 start = button(75, 500, 'Start')
 stop = button(325, 500, 'Stop')
 auto = button(75, 400, 'Auto')
 manual = button(325, 400, 'Manual')
-
 
 run = True
 while run:
@@ -98,18 +95,14 @@ while run:
         msg = "Stop"
         pub.publish(msg)
 
-    #pub.num()
-
-
     pygame.draw.rect(screen, grey, (100, 100, 400, 50))
     message = font.render(msg, True, white)
     screen.blit(message, (120, 100))
 
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
+            
     pygame.display.update()
 
 pygame.quit()
