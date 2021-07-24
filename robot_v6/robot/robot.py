@@ -39,7 +39,7 @@ class Robot():
             if self.angle >= 359: self.angle = 0
             self.vector.rotate_ip(-self.rotation_speed)
 
-    def movement(self, move): #какой то косяк с неровным движением
+    def movement(self, move): 
         if move == 1:
             self.robot_rect.center += self.vector * 5.5
         if move == -1:
