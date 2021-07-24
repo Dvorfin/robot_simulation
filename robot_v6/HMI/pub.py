@@ -6,9 +6,6 @@ mqttBroker = "mqtt.eclipseprojects.io"
 client = mqtt.Client("HMI")
 client.connect(mqttBroker)
 
-i = 0
-
-
 def publish(msg):
     client.publish("Commands", msg)
     print("Just published " + msg + " to Topic Commands")
