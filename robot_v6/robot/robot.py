@@ -2,7 +2,6 @@ import time
 
 from draw import *
 
-
 class Robot():
     def __init__(self, x_start, y_start):   # задаем начальные координаты робота
         self.robot_height = 50  # размеры робота
@@ -20,7 +19,6 @@ class Robot():
 
         pygame.draw.line(self.robot, WHITE, [10, 0], [37, 0], 9)    # линия на роботе
         self.robot_rect = self.robot.get_rect(center =(x_start,y_start))    # получение координат прямоугольника
-
 
         self.previous_x_pos = 0
         self.previous_y_pos = 0
@@ -87,13 +85,11 @@ class Robot():
                 else:
                     self.rotation(1)
 
-
             elif (self.vector.as_polar()[1]<0 and vec2.as_polar()[1]<0):
                 if math.fabs(self.vector.as_polar()[1]) > math.fabs(vec2.as_polar()[1]):
                     self.rotation(1)
                 else:
                     self.rotation(-1)
-
 
     def startRobot(self):
         self.robotStarted = True
