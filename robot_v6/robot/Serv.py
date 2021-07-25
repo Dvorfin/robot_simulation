@@ -13,7 +13,6 @@ def on_message_x(client, userdata, message): #Прием данных о мес�
     Beer_x = float(Beer_x)
     #print("Beer_x ", Beer_x)
 
-
 def on_message_y(client, userdata, message): #Прием данных о местоположении бутылки по х
     #print("Received message: ", str(message.payload.decode("utf-8")))
     global Beer_y
@@ -65,9 +64,6 @@ def start_R():
     client.subscribe("Rob_y")
     client.on_message = on_message_Rob_y
 
-
-
-
 def Get_X():
     return Beer_x
 
@@ -79,9 +75,3 @@ def Get_Rob_X():
 
 def Get_Rob_Y():
     return Rob_y
-
-
-
-
-
-
