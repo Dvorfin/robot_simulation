@@ -44,11 +44,10 @@ while running:
     # включение/отключение робота, выбор режима работы: авто/ручной
     if str(sub.get_msg()) == "Start": robot.startRobot()
     if str(sub.get_msg()) == "Auto": robot.auto()
-    if str(sub.get_msg()) == "Manual":
-        robot.manual()
-        manual()
+    if str(sub.get_msg()) == "Manual": robot.manual()
     if str(sub.get_msg()) == "Stop": robot.stopRobot()
-    print(Robot.getRobotPos(robot))
+        
+    #print(Robot.getRobotPos(robot))
 
     if robot.cargoTaken == True:    # если груз взят, то везем его
         robot.goTo(Serv.Get_CheckPoint_X(), Serv.Get_CheckPoint_Y(), Serv.Get_Rob_X(), Serv.Get_Rob_Y()) #стерли +50 к ыгрыку
